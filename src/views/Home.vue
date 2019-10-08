@@ -1,6 +1,9 @@
 <template>
-  <div>
-  </div>
+  <v-layout wrap>
+    <v-flex xs12 sm6 md4 v-for="n of 15" :key="n" class="pt-6" >
+      <toukou />
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
@@ -14,4 +17,5 @@ export default {
 </script>
 
 <style>
+
 </style>

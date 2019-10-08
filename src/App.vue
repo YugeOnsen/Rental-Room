@@ -1,10 +1,8 @@
 <template>
   <v-app>
     <TheHeader />
-    <p class=space_for_header> </p>
-    <v-content>
-      <router-view />
-    </v-content>
+    <p class="space_for_header"> </p>
+    <router-view />
   </v-app>
 </template>
 
@@ -22,7 +20,7 @@ export default {
 
 <style>
 .space_for_header{
-  padding-top:80px;
-  margin-bottom: 0px;
+  padding-top:70px;
+  margin-bottom:0px;
 }
 </style>
