@@ -1,20 +1,17 @@
 <template>
   <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span class="font-weight-light">Rental - room</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-    </v-app-bar>
+    <TheHeader />
+    <p class="space_for_header"> </p>
+    <router-view />
   </v-app>
-
 </template>
 
 <script>
+import TheHeader from './components/TheHeader'
 
 export default {
-  name: 'App',
   components: {
+    TheHeader
   },
   data: () => ({
   }),
@@ -22,5 +19,8 @@ export default {
 </script>
 
 <style>
-
+.space_for_header{
+  padding-top:70px;
+  margin-bottom:0px;
+}
 </style>
