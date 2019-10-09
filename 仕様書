@@ -1,9 +1,0 @@
-名前         user_name
-部屋の場所    room_location
-貸し時間      rental_time
-料金         cost
-投稿時間      posy_time
-ユーザーのアイコン       user_icon
-ブックマークしたかどうか  Bookmark
-投稿のコメント           comment
-画像（のアドレス）       img
