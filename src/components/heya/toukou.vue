@@ -7,13 +7,9 @@
         <v-list-item-avatar color="grey"></v-list-item-avatar>
         <v-list-item-content>
           <v-list-item-title class="headline">
-          <div v-for="item in list"
-            v-bind:key="item.id"
-            v-bind:class="{ tuyoi: item.hp > 300 }">
-            ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-          </div>
+            {{data.room_location}}
           </v-list-item-title>
-          <v-list-item-subtitle>by W_Lawrence</v-list-item-subtitle>
+          <v-list-item-subtitle>by {{ data.user_name }}</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
@@ -23,7 +19,11 @@
       ></v-img>
 
       <v-card-text>
-        IA chanha sekaino shinri nanode minnamo shinkou shiyoune.
+        {{data.comment}}
+        <li>
+          {{data.rental_time}}
+          {{data.cost}}
+        </li>
       </v-card-text>
 
       <v-card-actions>
@@ -54,14 +54,20 @@
 export default {
   components: {
   },
-  data() {
+  data: function() {
     return {
-      list: [
-      { id: 1, name: 'スライム', hp: 100 },
-      { id: 2, name: 'ゴブリン', hp: 200 },
-      { id: 3, name: 'ドラゴン', hp: 500 }
-      ]
+      data:{
+        "user_name":"lawrence",
+        "room_location":"okayama",
+        "rental_time":"30m",
+        "cost":"600",
+        "post_time":"keisikiwasureta",
+        "user_icom":"./icon/user_id",
+        "bookmark":"0",
+        "comment":"IA chanha sekaino shinri nanode minnamo shinkou shiyoune.",
+        "img":"/img/home"
+      }
     }
-  },
+  }
 }
 </script>
